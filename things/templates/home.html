@@ -1,11 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Things</title>
+    <meta charset="UTF-8">
+    <title>Thing Form</title>
 </head>
 <body>
-  <h1>
-    Things
-  </h1>
-  <p>Some stuff about things goes here.</p>
+  <h1>Welcome to the Thing Form</h1>
+  <h2>Add a New Thing</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>
